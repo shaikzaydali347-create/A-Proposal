@@ -1,0 +1,51 @@
+/* ===========================
+   BODY STYLING
+=========================== */
+body {
+  font-family: 'Dancing Script', cursive;   /* paragraph font */
+  background: linear-gradient(to bottom, #fff5f7, #ffe6e6); /* soft pink gradient */
+  color: #b20000;                          /* deep red text */
+  text-align: center;                       /* center content */
+  padding: 50px 20px;                       /* spacing */
+}
+
+/* ===========================
+   HEADING STYLING
+=========================== */
+h1 {
+  font-family: 'Playfair Display', serif;      /* heading font */
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #b20000;
+  text-shadow: 0 0 10px #ff7f7f, 0 0 20px #ff9999; /* soft glow */
+  opacity: 0;                                  /* start invisible for fade-in */
+  animation: fadeIn 2s forwards, float 4s 2s infinite ease-in-out;
+}
+
+/* ===========================
+   PARAGRAPH STYLING
+=========================== */
+p.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s 2s forwards; /* fade in after heading */
+  font-size: 1.5em;
+  line-height: 1.6;                  /* spacing between lines */
+}
+
+/* ===========================
+   FADE-IN KEYFRAMES
+=========================== */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===========================
+   FLOAT KEYFRAMES (heading)
+=========================== */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
